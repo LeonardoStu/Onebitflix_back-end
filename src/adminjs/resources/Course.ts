@@ -7,3 +7,4 @@ export const courseResourceOptions: ResourceOptions = {
   listProperties: ['id', 'name', 'featured', 'categoryId'],
   showProperties: ['id', 'name', 'synopsis', 'featured', 'thumbnailUrl', 'categoryId', 'createdAt', 'updatedAt']
 }
+

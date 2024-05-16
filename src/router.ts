@@ -10,6 +10,7 @@ import { likesController } from './controllers/likeController'
 const router = express.Router()
 
 router.post('/likes', ensureAuth, likesController.save)
+router.delete('/likes/:id', ensureAuth, likesController.delete)
 
 router.post('/auth/register', authController.register)
 router.post('/auth/login', authController.login)

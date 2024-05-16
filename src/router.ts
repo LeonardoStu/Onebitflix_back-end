@@ -5,8 +5,11 @@ import { episodesController } from './controllers/episodesController'
 import { authController } from './controllers/authController'
 import { ensureAuth, ensureAuthViaQuery } from './middlewares/auth'
 import { favoritesController } from './controllers/favoriteController'
+import { likesController } from './controllers/likeController'
 
 const router = express.Router()
+
+router.post('/likes', ensureAuth, likesController.save)
 
 router.post('/auth/register', authController.register)
 router.post('/auth/login', authController.login)

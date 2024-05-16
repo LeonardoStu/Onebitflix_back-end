@@ -46,6 +46,18 @@ export const coursesController = {
         }
     },
 
+    // GET /courses/popular
+    popular: async(req: Request, res: Response) => {
+        try {
+            const topTen = await courseServices.getTopTenByLikes()
+            return res.json(topTen)
+        } catch (err) {
+            if(err instanceof Error){
+                return res.status(400).json({message: err.message})
+            }
+        }
+    },
+
     // GET /courses/:id
     show: async (req: AuthenticatedRequest, res: Response) => {
         const userId = req.user!.id

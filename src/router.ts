@@ -33,6 +33,7 @@ router.get('/favorites', ensureAuth, favoritesController.index)
 router.post('/favorites', ensureAuth, favoritesController.save)
 router.delete('/favorites/:id', ensureAuth, favoritesController.delete)
 
+router.get('/users/current', ensureAuth, usersController.show)
 router.get('/users/current/watching', ensureAuth, usersController.watching)
 
 

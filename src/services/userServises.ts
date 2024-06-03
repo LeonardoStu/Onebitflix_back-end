@@ -44,7 +44,7 @@ export const userService = {
     update: async(id: number, attributes: {
         firstName: string
         lastName: string
-        phone: number
+        phone: string
         birth: Date
         email: string
     }) => {

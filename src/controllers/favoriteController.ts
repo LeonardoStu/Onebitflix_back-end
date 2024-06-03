@@ -23,7 +23,7 @@ export const favoritesController = {
         const { courseId } = req.body
 
         try {
-            const favorite = await favoriteService.create(userId, courseId)
+            const favorite = await favoriteService.create(userId, Number(courseId))
             return res.status(201).json(favorite)
         } catch (err) {
             if (err instanceof Error) {

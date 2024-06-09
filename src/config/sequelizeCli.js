@@ -1,10 +1,10 @@
+require('dotenv').config()
+
 module.exports = {
     development: {
-        dialect: 'postgres',
-        host: 'localhost',
-        port: '5432',
-        database: 'onebitflix_development',
-        username: 'postgres',
-        password: '1234'
+        url: process.env.DATABASE_URL
+    },
+    production: {
+        url: process.env.DATABASE_URL
     }
 }

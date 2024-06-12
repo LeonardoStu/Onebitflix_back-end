@@ -1,7 +1,12 @@
 import { Sequelize } from "sequelize";
-import { DATABASE_URL } from "../config/environment";
 
-export const sequelize = new Sequelize (DATABASE_URL, {
+export const sequelize = new Sequelize ({
+    dialect: 'postgres',
+    host: 'localhost',
+    port: 5432,
+    database: 'onebitflix_development',
+    username: 'postgres',
+    password: '1234',
     define: {
         underscored: true
     }
